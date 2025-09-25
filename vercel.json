@@ -7,11 +7,7 @@
   "routes": [
     {
       "src": "/(.*)",
-<<<<<<< HEAD
       "dest": "/api/dashboard.php"
-=======
-      "dest": "/api/index.php"
->>>>>>> d28a6a3894ace3976bb416f297278dcda35c9772
     }
   ]
 }
