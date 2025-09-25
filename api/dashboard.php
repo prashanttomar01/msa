@@ -1,11 +1,12 @@
 <?php
 session_start();
-require_once "includes/common_functions.php";
+require_once "/../includes/common_functions.php";
+// require_once "includes/common_functions.php";
 if (!isset($_SESSION['user_id'])) {
     header('location: login.php');
 }
 $query = "SELECT status SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END), SUM(CASE WHEN status = 'inactive' THEN 1 ELSE 0 END) FROM users";
-$users = $obj -> select($query);
+$users = $obj->select($query);
 
 ?>
 <!DOCTYPE html>
@@ -92,7 +93,8 @@ $users = $obj -> select($query);
             chart.draw(data, options);
         }
     </script>
-    <?php // include 'includes/footer.php'; ?>
+    <?php // include 'includes/footer.php'; 
+    ?>
 </body>
 
 </html>
